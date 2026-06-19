@@ -1,40 +1,45 @@
-# Telegram Echo Bot
+# Echo Bot Codex
+
+Простой учебный Telegram-бот, который отправляет пользователю копию
+полученного сообщения.
 
 ## Возможности
 
-- Отвечает на все входящие сообщения, включая текст, стикеры и GIF.
-- Отвечает текстом на все входящие сообщения (включая подписи к медиа).
-- Команда `/start` показывает приветствие.
+- команда `/start` выводит приветствие;
+- бот повторяет текстовые сообщения;
+- бот копирует изображения, стикеры, GIF и другие сообщения.
 
-## Setup
+## Запуск на Windows
 
-1. Create a Telegram bot with @BotFather and copy the token.
-2. Install dependencies:
+1. Создайте виртуальное окружение:
 
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
+   ```powershell
+   python -m venv .venv
+   ```
 
-3. Create a `.env` file with the bot token:
+2. Активируйте его:
 
-```bash
-TELEGRAM_BOT_TOKEN="YOUR_TOKEN"
-```
+   ```powershell
+   .\.venv\Scripts\Activate.ps1
+   ```
 
-4. Run the bot:
+3. Установите зависимости:
 
-```bash
-python bot.py
-```
+   ```powershell
+   pip install -r requirements.txt
+   ```
 
-The bot will echo back any message it receives.
-3. Export the token and run the bot:
+4. Скопируйте `.env.example` в `.env` и укажите токен:
 
-```bash
-export TELEGRAM_BOT_TOKEN="YOUR_TOKEN"
-python bot.py
-```
+   ```env
+   TELEGRAM_BOT_TOKEN=токен_вашего_бота
+   ```
 
-The bot will echo back any text message it receives.
+5. Запустите бота:
+
+   ```powershell
+   python bot.py
+   ```
+
+Токен Telegram-бота можно получить через
+[@BotFather](https://t.me/BotFather).
